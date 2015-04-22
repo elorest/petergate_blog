@@ -1,0 +1,22 @@
+doctype html
+html
+  head
+    title
+      | Petergate Demo 
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  body
+    .notifications
+      p.notice
+        = notice
+      p.alert
+        = alert
+      ul
+        - if user_signed_in?
+          li
+            = link_to('Logout', destroy_user_session_path, :method => :delete)
+        - else
+          li
+            = link_to('Login', new_user_session_path)
+    = yield
