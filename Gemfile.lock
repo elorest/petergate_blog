@@ -1,3 +1,14 @@
+PATH
+  remote: ../petergate_api
+  specs:
+    petergate_api (0.1.0)
+
+PATH
+  remote: ../petergate
+  specs:
+    petergate (1.6.3)
+      activerecord (> 4.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -134,7 +145,7 @@ GEM
       activesupport (>= 3.1, < 5.0)
       railties (>= 3.1, < 5.0)
       slim (~> 3.0)
-    spring (1.3.4)
+    spring (1.3.6)
     sprockets (3.0.1)
       rack (~> 1.0)
     sprockets-rails (2.2.4)
@@ -170,6 +181,8 @@ DEPENDENCIES
   devise
   jbuilder (~> 2.0)
   jquery-rails
+  petergate!
+  petergate_api!
   rails (= 4.2.0)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
@@ -179,3 +192,6 @@ DEPENDENCIES
   turbolinks
   uglifier (>= 1.3.0)
   web-console (~> 2.0)
+
+BUNDLED WITH
+   1.11.2

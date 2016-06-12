@@ -17,7 +17,7 @@ table
         td = post.content
         td = post.user.email
         td = link_to 'Show', post
-        td = link_to 'Edit', edit_post_path(post)
+        td = link_to 'Edit', edit_post_path(post) if logged_in?(:admin, :user, :company_admin)
         td = link_to 'Destroy', post, data: {:confirm => 'Are you sure?'}, :method => :delete
 
 br
